@@ -1,0 +1,41 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+displayURL="https://gitlab.com/stalking-dragons/minecraft/almanac-core"
+logoFile="icon.png"
+credits="Developed by Stalking Dragons"
+description='''Almanac Core is the content-as-data library for the Majestic mod ecosystem: datapack codecs, reload listeners and a shared registry for spells, rituals, research nodes and relics, synced to clients. It ships no concrete content — mods and datapacks define the entries. Requires Astral Core. The ritual RecipeType, JEI plugin categories, the hybrid effect package and the Vellumli guide bridge are planned for future betas. Part of the Majestic ecosystem.'''
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="astral_core"
+    type="required"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="vellumli"
+    type="optional"
+    ordering="AFTER"
+    side="BOTH"
+
+# Wired in a later milestone:
+#   [[dependencies.${mod_id}]] modId="jei"         type="optional" ordering="AFTER" side="BOTH"
